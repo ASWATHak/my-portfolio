@@ -29,8 +29,11 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body 
+        className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans antialiased"
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
