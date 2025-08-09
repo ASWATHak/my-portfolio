@@ -42,6 +42,7 @@ export default function ContactPage() {
         setSubmitStatus('error');
       }
     } catch (error) {
+      console.log(error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -71,11 +72,11 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Let's Work Together
+            Let&apos;s Work Together
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Have a project in mind or want to discuss opportunities? 
-            I'd love to hear from you. Let's create something amazing together.
+            I&apos;d love to hear from you. Let&apos;s create something amazing together.
           </p>
         </motion.div>
 
@@ -163,7 +164,7 @@ export default function ContactPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className="p-4 bg-green-100 dark:bg-green-900/30 border border-green-200 dark:border-green-800 rounded-lg text-green-700 dark:text-green-300"
                   >
-                    Thank you! Your message has been sent successfully. I'll get back to you soon.
+                    Thank you! Your message has been sent successfully. I&apos;ll get back to you soon.
                   </motion.div>
                 )}
                 

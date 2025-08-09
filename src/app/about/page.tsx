@@ -3,7 +3,7 @@ import SkillsGrid from '@/components/sections/SkillsGrid';
 import Timeline from '@/components/sections/Timeline';
 import skillsData from '@/data/skills.json';
 import experienceData from '@/data/experience.json';
-import { Experience } from '@/types/index'; 
+import { Experience } from '@/types/index';
 
 export default function AboutPage() {
   return (
@@ -21,13 +21,13 @@ export default function AboutPage() {
           </h1>
           <div className="max-w-3xl mx-auto">
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-              I'm Aswath, a passionate full-stack developer with over 5 years of experience 
-              crafting digital solutions that bridge the gap between innovative design and 
+              I&apos;m Aswath, a passionate full-stack developer with over 5 years of experience
+              crafting digital solutions that bridge the gap between innovative design and
               robust functionality.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Specializing in modern web technologies, I build scalable applications with 
-              a focus on user experience, performance, and maintainable code. Currently 
+              Specializing in modern web technologies, I build scalable applications with
+              a focus on user experience, performance, and maintainable code. Currently
               exploring AI integration to create more intelligent and interactive web experiences.
             </p>
           </div>

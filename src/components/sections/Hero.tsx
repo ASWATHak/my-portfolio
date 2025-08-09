@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6"
         >
-          Hi, I'm{' '}
+          Hi, I&apos;m{' '}
           <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
             Aswath
           </span>
@@ -92,7 +92,7 @@ export default function Hero() {
             size="lg"
             className="group"
           >
-            Let's Talk
+            Let&apos;s Talk
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
           

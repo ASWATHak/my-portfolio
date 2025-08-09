@@ -41,8 +41,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            Oops! The page you're looking for seems to have wandered off into the digital void. 
-            Don't worry, even the best developers get lost sometimes.
+            Oops! The page you&apos;re looking for seems to have wandered off into the digital void. 
+            Don&apos;t worry, even the best developers get lost sometimes.
           </p>
         </motion.div>
 

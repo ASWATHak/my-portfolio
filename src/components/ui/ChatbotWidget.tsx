@@ -57,7 +57,7 @@ export default function ChatbotWidget() {
               <div className="space-y-4">
                 <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
                   <p className="text-sm text-gray-700 dark:text-gray-300">
-                    Hi! I'm your AI assistant. I'll be able to help you learn more about Aswath's work and experience once Phase 2 is complete.
+                    Hi! I&apos;m your AI assistant. I&apos;ll be able to help you learn more about Aswath&apos;s work and experience once Phase 2 is complete.
                   </p>
                 </div>
                 <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
