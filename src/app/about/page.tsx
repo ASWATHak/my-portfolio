@@ -1,4 +1,5 @@
-import { motion } from '@/components/ui/FramerMotion';
+'use client';
+import { motion } from 'framer-motion';
 import SkillsGrid from '@/components/sections/SkillsGrid';
 import Timeline from '@/components/sections/Timeline';
 import skillsData from '@/data/skills.json';

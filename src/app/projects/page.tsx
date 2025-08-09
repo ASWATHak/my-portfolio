@@ -1,4 +1,5 @@
-import { motion } from '@/components/ui/FramerMotion';
+'use client';
+import { motion } from 'framer-motion';
 import ProjectCard from '@/components/sections/ProjectCard';
 import projectsData from '@/data/projects.json';
 import { Project } from '@/types';
