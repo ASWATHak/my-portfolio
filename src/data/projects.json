@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ai-portfolio",
+    "title": "AI-Powered Portfolio",
+    "description": "A modern portfolio website with integrated AI chatbot, visitor analytics, and intelligent search capabilities.",
+    "image": "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "techStack": ["Next.js", "TypeScript", "NestJS", "OpenAI", "WebSockets"],
+    "liveUrl": "https://portfolio.example.com",
+    "githubUrl": "https://github.com/username/ai-portfolio",
+    "featured": true
+  },
+  {
+    "id": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "Full-stack e-commerce solution with real-time inventory management, payment processing, and analytics dashboard.",
+    "image": "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "techStack": ["React", "Node.js", "PostgreSQL", "Stripe", "Redis"],
+    "liveUrl": "https://shop.example.com",
+    "githubUrl": "https://github.com/username/ecommerce",
+    "featured": true
+  },
+  {
+    "id": "task-manager",
+    "title": "Collaborative Task Manager",
+    "description": "Team productivity app with real-time collaboration, project tracking, and automated workflow management.",
+    "image": "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "techStack": ["Vue.js", "Express", "MongoDB", "Socket.io", "Docker"],
+    "liveUrl": "https://tasks.example.com",
+    "githubUrl": "https://github.com/username/task-manager",
+    "featured": false
+  },
+  {
+    "id": "weather-app",
+    "title": "Weather Forecast App",
+    "description": "Beautiful weather application with location-based forecasts, interactive maps, and weather alerts.",
+    "image": "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "techStack": ["React Native", "TypeScript", "OpenWeather API", "Maps SDK"],
+    "liveUrl": "https://weather.example.com",
+    "githubUrl": "https://github.com/username/weather-app",
+    "featured": false
+  }
+]
