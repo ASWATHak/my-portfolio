@@ -1,9 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 interface BadgeProps {
-  children: string;
+  children: ReactNode;
   variant?: 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'error';
   size?: 'sm' | 'md' | 'lg';
   className?: string;

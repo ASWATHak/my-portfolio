@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion } from '@/components/ui/FramerMotion';
 import SkillsGrid from '@/components/sections/SkillsGrid';
 import Timeline from '@/components/sections/Timeline';
 import skillsData from '@/data/skills.json';
 import experienceData from '@/data/experience.json';
+import { Experience } from '@/types/index'; 
 
 export default function AboutPage() {
   return (
@@ -56,7 +57,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Experience & Education
           </h2>
-          <Timeline experiences={experienceData} />
+          <Timeline experiences={experienceData as Experience[]} />
         </motion.section>
       </div>
     </div>

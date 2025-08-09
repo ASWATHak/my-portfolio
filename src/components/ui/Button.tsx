@@ -46,10 +46,20 @@ export default function Button({
   const MotionButton = motion.button;
   const MotionLink = motion.a;
 
-  const motionProps = {
-    whileHover: disabled ? {} : { scale: 1.02 },
-    whileTap: disabled ? {} : { scale: 0.98 },
-    transition: { type: 'spring', stiffness: 400, damping: 17 },
+  const enabledMotionProps = {
+    whileHover: { 
+      scale: 1.02, 
+      transition: { type: 'spring', stiffness: 400, damping: 17 } 
+    },
+    whileTap: { 
+      scale: 0.98,
+      transition: { type: 'spring', stiffness: 400, damping: 17 }
+    },
+  };
+
+  const disabledMotionProps = {
+    whileHover: {},
+    whileTap: {},
   };
 
   if (href) {
@@ -57,7 +67,7 @@ export default function Button({
       <MotionLink
         href={href}
         className={classes}
-        {...motionProps}
+        {...(disabled ? disabledMotionProps : enabledMotionProps)}
       >
         {children}
       </MotionLink>
@@ -70,7 +80,7 @@ export default function Button({
       onClick={onClick}
       disabled={disabled}
       className={classes}
-      {...motionProps}
+      {...(disabled ? disabledMotionProps : enabledMotionProps)}
     >
       {children}
     </MotionButton>
