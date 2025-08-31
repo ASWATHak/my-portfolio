@@ -1,65 +1,88 @@
 'use client';
 import { motion } from 'framer-motion';
-import SkillsGrid from '@/components/sections/SkillsGrid';
-import Timeline from '@/components/sections/Timeline';
-import skillsData from '@/data/skills.json';
-import experienceData from '@/data/experience.json';
-import { Experience } from '@/types/index';
+import SkillMatrix from '@/components/quantum/SkillMatrix';
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header */}
+    <div className="min-h-screen bg-black">
+      {/* Hero Section */}
+      <div className="relative h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 1 }}
+          className="text-center z-10 max-w-4xl mx-auto px-6"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            About Me
-          </h1>
-          <div className="max-w-3xl mx-auto">
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-              I&apos;m Aswath, a passionate full-stack developer with over 5 years of experience
-              crafting digital solutions that bridge the gap between innovative design and
-              robust functionality.
+          <motion.h1
+            className="text-6xl font-display text-cyan-400 mb-6"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+          >
+            NEURAL ARCHITECT
+          </motion.h1>
+          
+          <motion.div
+            className="space-y-6 text-lg text-gray-300 leading-relaxed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            <p>
+              I&apos;m <span className="text-cyan-400 font-mono">Aswath</span>, a quantum developer
+              architecting digital realities through neural networks and quantum algorithms.
             </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Specializing in modern web technologies, I build scalable applications with
-              a focus on user experience, performance, and maintainable code. Currently
-              exploring AI integration to create more intelligent and interactive web experiences.
+            <p>
+              With over <span className="text-purple-400">5 years</span> of experience in the digital matrix,
+              I specialize in creating immersive web experiences that push the boundaries of what&apos;s possible.
             </p>
-          </div>
+            <p>
+              My expertise spans across <span className="text-green-400">full-stack development</span>,
+              <span className="text-cyan-400"> AI integration</span>, and
+              <span className="text-purple-400"> quantum computing principles</span>.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            className="mt-12 flex justify-center gap-8 text-sm font-mono"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            <div className="text-center">
+              <div className="text-3xl text-cyan-400 font-bold">50+</div>
+              <div className="text-gray-400">Projects</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl text-purple-400 font-bold">5+</div>
+              <div className="text-gray-400">Years</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl text-green-400 font-bold">∞</div>
+              <div className="text-gray-400">Possibilities</div>
+            </div>
+          </motion.div>
         </motion.div>
-
-        {/* Skills Section */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        
+        {/* Background grid */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none quantum-grid" />
+      </div>
+      
+      {/* Skills Matrix Section */}
+      <div className="relative">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Skills & Technologies
+          <h2 className="text-4xl font-display text-center text-purple-400">
+            TECHNICAL EXPERTISE
           </h2>
-          <SkillsGrid skills={skillsData} />
-        </motion.section>
-
-        {/* Experience Timeline */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Experience & Education
-          </h2>
-          <Timeline experiences={experienceData as Experience[]} />
-        </motion.section>
+        </motion.div>
+        
+        <SkillMatrix />
       </div>
     </div>
   );

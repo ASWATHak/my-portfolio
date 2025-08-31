@@ -1,48 +1,233 @@
 @import "tailwindcss";
 
 :root {
-  --background: 255 255 255;
-  --foreground: 23 23 23;
-}
-
-@theme inline {
+  --quantum-blue: #00D4FF;
+  --neural-purple: #8A2BE2;
+  --neon-green: #39FF14;
+  --hologram-cyan: #00FFFF;
+  --void-black: #0A0A0A;
+  --plasma-white: #FAFAFA;
+  
+  --background: 10 10 10;
+  --foreground: 250 250 250;
+  
   --color-background: rgb(var(--background));
   --color-foreground: rgb(var(--foreground));
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+  --font-display: 'Orbitron', 'Inter', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 10 10 10;
-    --foreground: 237 237 237;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: rgb(var(--background));
+  background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
   color: rgb(var(--foreground));
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-/* Custom scrollbar */
+/* Quantum Grid Animation */
+.quantum-grid {
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-shift 20s linear infinite;
+}
+
+@keyframes grid-shift {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Neural Glow Effects */
+.neural-glow {
+  box-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(0, 212, 255, 0.2),
+    0 0 60px rgba(0, 212, 255, 0.1);
+}
+
+.quantum-border {
+  border: 1px solid transparent;
+  background: linear-gradient(90deg, var(--quantum-blue), var(--neural-purple)) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+}
+
+/* Holographic Text Effect */
+.holo-text {
+  background: linear-gradient(
+    45deg,
+    var(--quantum-blue),
+    var(--hologram-cyan),
+    var(--neon-green),
+    var(--quantum-blue)
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: holo-shift 3s ease-in-out infinite;
+}
+
+@keyframes holo-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Quantum Button Styles */
+.quantum-button {
+  position: relative;
+  background: transparent;
+  border: 1px solid var(--quantum-blue);
+  color: var(--quantum-blue);
+  padding: 12px 24px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.quantum-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--quantum-blue), transparent);
+  transition: left 0.5s;
+}
+
+.quantum-button:hover::before {
+  left: 100%;
+}
+
+.quantum-button:hover {
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 
+    0 0 20px rgba(0, 212, 255, 0.4),
+    inset 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+/* Scrollbar Quantum Styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(243 244 246);
+  background: rgba(26, 26, 26, 0.8);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(156 163 175);
+  background: linear-gradient(180deg, var(--quantum-blue), var(--neural-purple));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(107 114 128);
+  background: linear-gradient(180deg, var(--hologram-cyan), var(--neon-green));
 }
 
+/* Selection Styles */
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: white;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid var(--quantum-blue);
+  outline-offset: 2px;
+}
+
+/* Typography Classes */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Animation Classes */
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Quantum Loading Animation */
+.quantum-loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.quantum-loader::before,
+.quantum-loader::after {
+  content: '';
+  position: absolute;
+  border: 2px solid var(--quantum-blue);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  animation: quantum-spin 2s linear infinite;
+}
+
+.quantum-loader::after {
+  border-color: var(--neural-purple);
+  animation-duration: 1.5s;
+  animation-direction: reverse;
+}
+
+@keyframes quantum-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Dark mode enhancements */
+.dark {
+  --background: 10 10 10;
+  --foreground: 237 237 237;
+}
+
+/* Custom scrollbar for dark mode */
 .dark ::-webkit-scrollbar-track {
   background: rgb(31 41 55);
 }
@@ -53,15 +238,4 @@ body {
 
 .dark ::-webkit-scrollbar-thumb:hover {
   background: rgb(107 114 128);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Focus styles */
-.focus-visible:focus {
-  outline: 2px solid rgb(59 130 246);
-  outline-offset: 2px;
 }

@@ -1,28 +1,26 @@
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import { ThemeProvider } from '@/providers/ThemeProvider';
-import ChatbotWidget from '@/components/ui/ChatbotWidget';
+import SynapticNav from '@/components/neural/SynapticNav';
 import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Aswath | Full-Stack Developer',
-  description: 'Full-Stack Developer crafting intelligent web experiences with modern technologies and AI integration.',
-  keywords: 'Full-Stack Developer, React, Next.js, TypeScript, AI, Web Development',
+  title: 'Aswath | Quantum Developer',
+  description: 'Architecting digital realities through neural networks and quantum algorithms.',
+  keywords: 'Quantum Developer, Neural Networks, AI, Web Development, React, Three.js',
   authors: [{ name: 'Aswath' }],
   creator: 'Aswath',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://aswath.dev',
-    title: 'Aswath | Full-Stack Developer',
-    description: 'Full-Stack Developer crafting intelligent web experiences with modern technologies and AI integration.',
-    siteName: 'Aswath Portfolio',
+    title: 'Aswath | Quantum Developer',
+    description: 'Architecting digital realities through neural networks and quantum algorithms.',
+    siteName: 'Quantum Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aswath | Full-Stack Developer',
-    description: 'Full-Stack Developer crafting intelligent web experiences with modern technologies and AI integration.',
+    title: 'Aswath | Quantum Developer',
+    description: 'Architecting digital realities through neural networks and quantum algorithms.',
     creator: '@aswath',
   },
 };
@@ -30,20 +28,24 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body 
-        className="bg-white text-gray-900 dark:bg-gray-900 dark:text-white font-sans antialiased"
+        className="bg-black text-white font-mono antialiased overflow-x-hidden"
         suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="dark"
+          enableSystem={false}
+          forcedTheme="dark"
         >
-          <Header />
+          <SynapticNav />
           <main className="min-h-screen">{children}</main>
-          <Footer />
-          <ChatbotWidget />
         </ThemeProvider>
       </body>
     </html>

@@ -1,9 +1,9 @@
-import Hero from "@/components/sections/Hero";
+import QuantumHero from "@/components/quantum/QuantumHero";
 
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <QuantumHero />
     </>
   );
 }
