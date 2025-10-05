@@ -4,23 +4,23 @@ import './globals.css';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Aswath | Quantum Developer',
-  description: 'Architecting digital realities through neural networks and quantum algorithms.',
-  keywords: 'Quantum Developer, Neural Networks, AI, Web Development, React, Three.js',
+  title: 'Aswath | Full Stack Engineer',
+  description: 'Full Stack Engineer specializing in full-stack development, AI/LLM integration, and scalable backend systems. Building robust, scalable, and intelligent web applications.',
+  keywords: 'Full Stack Engineer, AI Integration, LLM, Backend Systems, React, Node.js, NestJS, Laravel, PostgreSQL, MySQL',
   authors: [{ name: 'Aswath' }],
   creator: 'Aswath',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://aswath.dev',
-    title: 'Aswath | Quantum Developer',
-    description: 'Architecting digital realities through neural networks and quantum algorithms.',
-    siteName: 'Quantum Portfolio',
+    title: 'Aswath | Full Stack Engineer',
+    description: 'Full Stack Engineer specializing in full-stack development, AI/LLM integration, and scalable backend systems.',
+    siteName: 'Full Stack Portfolio',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aswath | Quantum Developer',
-    description: 'Architecting digital realities through neural networks and quantum algorithms.',
+    title: 'Aswath | Full Stack Engineer',
+    description: 'Full Stack Engineer specializing in full-stack development, AI/LLM integration, and scalable backend systems.',
     creator: '@aswath',
   },
 };

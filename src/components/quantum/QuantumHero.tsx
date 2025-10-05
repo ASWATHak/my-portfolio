@@ -131,7 +131,7 @@ export default function QuantumHero() {
             <NeuralText delay={500}>ASWATH</NeuralText>
           </h1>
           <div className="text-2xl md:text-3xl text-cyan-400 font-mono">
-            <NeuralText delay={1500}>Quantum Developer</NeuralText>
+            <NeuralText delay={1500}>Full Stack Engineer</NeuralText>
           </div>
         </motion.div>
 
@@ -143,9 +143,10 @@ export default function QuantumHero() {
           transition={{ duration: 1, delay: 2 }}
         >
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Architecting digital realities through{' '}
-            <span className="text-purple-400">neural networks</span> and{' '}
-            <span className="text-green-400">quantum algorithms</span>
+            Building robust, scalable, and intelligent web applications through{' '}
+            <span className="text-purple-400">full-stack development</span>,{' '}
+            <span className="text-green-400">AI integration</span>, and{' '}
+            <span className="text-cyan-400">scalable backend systems</span>
           </p>
         </motion.div>
 
@@ -156,17 +157,25 @@ export default function QuantumHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 2.5 }}
         >
-          <motion.button
+          {/* <motion.button
             className="px-8 py-3 bg-cyan-400/20 border border-cyan-400 text-cyan-400 rounded-lg font-mono hover:bg-cyan-400/30 transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Explore Projects
-          </motion.button>
+          </motion.button> */}
           <motion.button
             className="px-8 py-3 bg-transparent border border-gray-600 text-gray-300 rounded-lg font-mono hover:border-gray-400 hover:text-white transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/resume/ASWATH KARUNAKARAN.pdf';
+              link.download = 'ASWATH KARUNAKARAN.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
             Download CV
           </motion.button>
@@ -188,7 +197,7 @@ export default function QuantumHero() {
             transition={{ duration: 2, repeat: Infinity }}
           />
           <span className="text-green-400 font-mono text-sm">
-            QUANTUM_STATE: ACTIVE
+            FULL_STACK_MODE: ACTIVE
           </span>
         </motion.div>
       </div>
@@ -210,7 +219,7 @@ export default function QuantumHero() {
               }}
               transition={{ duration: 1, repeat: Infinity }}
             >
-              QUANTUM_TUNNELING...
+              FULL_STACK_LOADING...
             </motion.div>
           </div>
         </motion.div>

@@ -1,12 +1,30 @@
+
 'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
 import SkillMatrix from '@/components/quantum/SkillMatrix';
 
 export default function AboutPage() {
+  // Refs for scrolling
+  const heroRef = React.useRef<HTMLDivElement>(null);
+  const skillRef = React.useRef<HTMLDivElement>(null);
+  const expRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
+    timers.push(setTimeout(() => {
+      skillRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 3000));
+    timers.push(setTimeout(() => {
+      expRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 8000));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
   return (
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
-      <div className="relative h-screen flex items-center justify-center">
+      <div ref={heroRef} className="relative h-screen flex items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,10 +67,10 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="text-3xl text-cyan-400 font-bold">50+</div>
               <div className="text-gray-400">Projects</div>
-            </div>
+            </div> */}
             <div className="text-center">
               <div className="text-3xl text-purple-400 font-bold">1.5</div>
               <div className="text-gray-400">Years</div>
@@ -69,33 +87,34 @@ export default function AboutPage() {
       </div>
       
       {/* Skills Matrix Section */}
-      <div className="relative">
+      <div ref={skillRef} className="relative flex flex-col items-center justify-center min-h-[80vh] py-20">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10"
+          className="mb-12 w-full flex justify-center"
         >
           <h2 className="text-4xl font-display text-center text-purple-400">
             TECHNICAL EXPERTISE
           </h2>
         </motion.div>
-        
-        <SkillMatrix />
+        <div className="w-full max-w-6xl">
+          <SkillMatrix />
+        </div>
       </div>
       
       {/* Experience Highlights Section */}
-      <div className="relative py-16">
+      <div ref={expRef} className="relative flex flex-col items-center justify-center min-h-[60vh] py-20">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="max-w-6xl mx-auto px-8"
+          className="mb-12 w-full flex justify-center"
         >
           <motion.h2
-            className="text-4xl font-display text-center text-cyan-400 mb-12"
+            className="text-4xl font-display text-center text-cyan-400 mb-0"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -103,7 +122,8 @@ export default function AboutPage() {
           >
             EXPERIENCE HIGHLIGHTS
           </motion.h2>
-          
+        </motion.div>
+        <div className="w-full max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
               className="space-y-6"
@@ -117,20 +137,17 @@ export default function AboutPage() {
                   Drove <span className="text-cyan-400 font-semibold">end-to-end product development</span>, taking applications from initial concept and design through final deployment and scaling.
                 </p>
               </div>
-              
               <div className="p-6 bg-black/50 border border-gray-600/50 rounded-lg backdrop-blur-md">
                 <p className="text-gray-300 leading-relaxed">
                   Built and optimized <span className="text-purple-400 font-semibold">robust APIs and microservices</span> using <span className="text-green-400">Node.js/NestJS</span> and <span className="text-yellow-400">PHP/Laravel</span> to ensure high performance and data integrity.
                 </p>
               </div>
-              
               <div className="p-6 bg-black/50 border border-gray-600/50 rounded-lg backdrop-blur-md">
                 <p className="text-gray-300 leading-relaxed">
                   Specialized in <span className="text-pink-400 font-semibold">AI-augmented systems</span>, integrating <span className="text-cyan-400">LLMs</span> with <span className="text-purple-400">Vector Databases</span> to implement features like <span className="text-green-400">RAG</span> for creating intelligent, automated product features.
                 </p>
               </div>
             </motion.div>
-            
             <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
@@ -143,7 +160,6 @@ export default function AboutPage() {
                   Engineered dynamic, responsive user interfaces and managed application state using <span className="text-cyan-400">React</span> and <span className="text-purple-400">Angular</span>.
                 </p>
               </div>
-              
               <div className="p-6 bg-black/50 border border-gray-600/50 rounded-lg backdrop-blur-md">
                 <p className="text-gray-300 leading-relaxed">
                   Managed database schemas and optimized queries for <span className="text-blue-400">MySQL</span> and <span className="text-green-400">PostgreSQL</span> in high-transaction environments.
@@ -151,7 +167,7 @@ export default function AboutPage() {
               </div>
             </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

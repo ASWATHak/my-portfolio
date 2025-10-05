@@ -47,7 +47,7 @@ export default function SkillMatrix() {
               Skill Matrix
             </h2>
             <p className="text-gray-400 text-lg">
-              Neural networks of expertise and quantum capabilities
+              Comprehensive skill set across modern web technologies and AI integration
             </p>
           </motion.div>
 
@@ -111,7 +111,7 @@ export default function SkillMatrix() {
                           />
                         </div>
 
-                        {/* Quantum particles for high-level skills */}
+                        {/* Highlight particles for high-level skills */}
                         {skill.level >= 80 && (
                           <div className="absolute -top-1 -right-1">
                             <motion.div

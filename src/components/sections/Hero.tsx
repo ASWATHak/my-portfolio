@@ -114,7 +114,7 @@ export default function Hero() {
         >
           {[
             { number: '50+', label: 'Projects' },
-            { number: '5+', label: 'Years' },
+            { number: '1.5', label: 'Years' },
             { number: '100%', label: 'Satisfaction' },
           ].map((stat, index) => (
             <div key={index} className="text-center">

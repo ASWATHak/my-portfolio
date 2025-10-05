@@ -16,7 +16,7 @@ interface NavNode {
 const navNodes: NavNode[] = [
   { id: 'home', label: 'Home', href: '/', color: '#00D4FF' },
   { id: 'about', label: 'About', href: '/about', color: '#8A2BE2' },
-  { id: 'projects', label: 'Projects', href: '/projects', color: '#FF6B35' },
+  { id: 'projects', label: 'Projects', href: '#', color: '#FF6B35' },
   { id: 'contact', label: 'Contact', href: '/contact', color: '#4ADE80' },
 ];
 
