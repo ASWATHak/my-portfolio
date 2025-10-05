@@ -1,26 +1,33 @@
 {
-  "frontend": [
-    { "name": "React", "level": 95 },
-    { "name": "Next.js", "level": 90 },
-    { "name": "TypeScript", "level": 88 },
-    { "name": "Vue.js", "level": 85 },
-    { "name": "TailwindCSS", "level": 92 },
-    { "name": "Framer Motion", "level": 80 }
+  "languages": [
+    { "name": "JavaScript", "level": 90 },
+    { "name": "TypeScript", "level": 85 },
+    { "name": "PHP", "level": 80 },
+    { "name": "HTML5", "level": 95 },
+    { "name": "CSS3", "level": 90 }
   ],
-  "backend": [
-    { "name": "Node.js", "level": 90 },
-    { "name": "NestJS", "level": 85 },
-    { "name": "Express", "level": 88 },
-    { "name": "Python", "level": 82 },
+  "frontend_frameworks": [
+    { "name": "React", "level": 90 },
+    { "name": "Angular", "level": 80 }
+  ],
+  "backend_frameworks": [
+    { "name": "Node.js", "level": 85 },
+    { "name": "NestJS", "level": 80 },
+    { "name": "Laravel", "level": 75 }
+  ],
+  "databases": [
+    { "name": "MySQL", "level": 80 },
     { "name": "PostgreSQL", "level": 85 },
-    { "name": "MongoDB", "level": 80 }
+    { "name": "Vector Databases (Pinecone, etc.)", "level": 70 }
   ],
-  "tools": [
-    { "name": "Git", "level": 95 },
-    { "name": "Docker", "level": 85 },
-    { "name": "AWS", "level": 80 },
-    { "name": "Vercel", "level": 90 },
-    { "name": "Figma", "level": 75 },
-    { "name": "WebSockets", "level": 85 }
+  "devops_tools": [
+    { "name": "Git", "level": 90 },
+    { "name": "Docker", "level": 75 },
+    { "name": "AWS (Basic Services)", "level": 70 }
+  ],
+  "ai_technologies": [
+    { "name": "LLMs (Large Language Models)", "level": 75 },
+    { "name": "RAG (Retrieval-Augmented Generation)", "level": 70 },
+    { "name": "AI Integration via APIs", "level": 80 }
   ]
 }

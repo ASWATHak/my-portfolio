@@ -7,10 +7,13 @@ import skills from '@/data/skills.json';
 export default function SkillMatrix() {
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'frontend': return '#00D4FF';
-      case 'backend': return '#8A2BE2';
-      case 'tools': return '#FF6B35';
-      default: return '#4ADE80';
+      case 'languages': return '#00D4FF';
+      case 'frontend_frameworks': return '#4ADE80';
+      case 'backend_frameworks': return '#8A2BE2';
+      case 'databases': return '#FF6B35';
+      case 'devops_tools': return '#F59E0B';
+      case 'ai_technologies': return '#EC4899';
+      default: return '#6B7280';
     }
   };
 
